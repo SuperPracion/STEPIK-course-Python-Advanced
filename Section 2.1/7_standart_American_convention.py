@@ -1,0 +1,7 @@
+print('{:,}'.format(int(input())))
+
+
+
+
+
+

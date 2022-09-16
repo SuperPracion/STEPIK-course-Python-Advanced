@@ -1,11 +1,9 @@
 n = int(input())
-mass = [[int(num) for num in input().split()] for _ in range(n)]
-total = [[0 for _ in range(n)] for _ in range(n)]
+mass = [input().split() for _ in range(n)]
 
 for i in range(n):
-    for j in range(n):
-        total[j][i] += mass[i][j]
+    for j in range(i, n):
+        mass[j][i], mass[i][j] = mass[i][j], mass[j][i]
 
-for i in range(n):
-    for j in range(n):
-        print(total[i][j])
+for list in mass:
+    print(*mass)

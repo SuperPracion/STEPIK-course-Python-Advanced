@@ -1,0 +1,1 @@
+print(list(map(lambda x: 255 - x, [int(color) for color in input().split()])), sep=' ')
